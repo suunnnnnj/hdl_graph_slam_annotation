@@ -69,8 +69,18 @@ add_message_files(FILES
   ScanMatchingStatus.msg
 )
 
-
-
+# add_service_files : 서비스 파일 지정, 서비스는 노드간에 요청과 응답을 주고받는데 사용
+##################
+# SaveMap.src 예시
+# bool utm
+# float32 resolution
+# string destination
+# ---
+# bool success
+# 
+# 서비스 파일은 request(--- 위쪽), response(--- 아래쪽) 으로 구성
+# request 의 정보를 입력받아서 작업을 수행한 뒤에, 작업이 성공적으로 완료되었는지 여부에 대한 것을 success 변수로 반환.
+##################
 add_service_files(FILES
   SaveMap.srv
   LoadGraph.srv
