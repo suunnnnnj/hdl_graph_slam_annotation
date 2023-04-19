@@ -62,10 +62,14 @@ endif()
 ########################
 ## message generation ##
 ########################
-add_message_files(FILES
+
+# add_message_files : 현재 패키지에서 사용할 메시지 파일 지정. 
+add_message_files(FILES 
   FloorCoeffs.msg
   ScanMatchingStatus.msg
 )
+
+
 
 add_service_files(FILES
   SaveMap.srv
